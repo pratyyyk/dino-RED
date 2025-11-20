@@ -37,7 +37,7 @@ The neural network controlling each dinosaur is a Feed-Forward Network configure
 
 ## 🕹️ Controls 
 
-- You don't need to control the dinosaur. The AI :)
+- You don't need to control the dinosaur. The AI will :)
 
 ## 📂 Installation
 

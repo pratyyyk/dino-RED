@@ -2,7 +2,6 @@
 
 A Python implementation of the NeuroEvolution of Augmenting Topologies (NEAT) algorithm applied to the classic Chrome Dinosaur endless runner.
 
-##  **A.I. Chrome Dinosaur** in **Python** using **Pygame** and **NEAT Algorithm**! 🦖
 
 ## Description
 
@@ -16,7 +15,7 @@ The game gets progressively harder as the player's score increases.
 
 ## Libraries
 
-- [pygame]: Pygame is a cross-platform set of Python modules designed for writing video games.
-- [NEAT]: NEAT is a method developed by Kenneth O. Stanley for evolving arbitrary neural networks.
+- pygame: Pygame is a cross-platform set of Python modules designed for writing video games.
+- NEAT: NEAT is a method developed by Kenneth O. Stanley for evolving arbitrary neural networks.
 
 

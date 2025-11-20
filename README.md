@@ -8,14 +8,3 @@ The core of this project is the interaction between the game environment (Pygame
 * Evolutionary Strategy: The system begins with a population of random neural networks. Agents that survive longer are assigned higher fitness scores.
 * Selection & Mutation: High-performing genomes breed the next generation. The algorithm modifies connection weights and occasionally adds new nodes or connections to the network topology.
 * Convergence: Over successive generations, the population converges on an optimal strategy for timing jumps relative to obstacle speed and distance.
-
-## Project Structure
-
-├── Assets/                  # Required graphic assets
-│   ├── Dino/                # DinoRun1.png, DinoRun2.png, DinoJump.png
-│   ├── Cactus/              # SmallCactus1-3.png, LargeCactus1-3.png
-│   └── Other/               # Track.png
-├── config.txt               # NEAT genome configuration
-├── main.py                  # Application entry point
-├── requirements.txt         # Dependency manifest
-└── README.md                # Documentation

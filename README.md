@@ -1,4 +1,4 @@
-# 🦕 dino-endless-runner
+# 🦕 dino-RUN
 
 A Python implementation of the NEAT algorithm (REINFORCEMENT LEARNING) applied to the classic Chrome Dino endless runner.
 

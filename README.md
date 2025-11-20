@@ -1,65 +1,87 @@
-# dino-RED
+#red-Dino
 
-A reinforcement learning agent implemented in Python that learns to play the Chrome Dino game using the NEAT (NeuroEvolution of Augmenting Topologies) algorithm.
+A Python implementation of the NeuroEvolution of Augmenting Topologies (NEAT) algorithm applied to the classic Chrome Dinosaur endless runner.
 
-Overview
+This project demonstrates an autonomous agent that evolves neural network topologies from scratch to master obstacle avoidance. The agent operates in real-time, learning optimal jump strategies through genetic variation and selection without pre-programmed heuristics.
 
-This project utilizes a genetic algorithm to train a neural network. The agent operates in real-time, observing the game state and making binary decisions (Jump or Run) to maximize survival time. Through successive generations, the population evolves optimal strategies for obstacle avoidance without pre-programmed rules.
+##Project Overview
 
-Methodology
+The core of this project is the interaction between the game environment (Pygame) and the evolutionary algorithm (NEAT-Python).
 
-The agent is powered by a Feed-Forward Neural Network evolved via NEAT.
+Evolutionary Strategy: The system begins with a population of random neural networks. Agents that survive longer are assigned higher fitness scores.
 
-Inputs (2):
+Selection & Mutation: High-performing genomes breed the next generation. The algorithm modifies connection weights and occasionally adds new nodes or connections to the network topology.
 
-Dinosaur Y-position (vertical location).
+Convergence: Over successive generations, the population converges on an optimal strategy for timing jumps relative to obstacle speed and distance.
 
-Euclidean distance to the next obstacle.
+##Technical Architecture
 
-Outputs (1):
+The neural network controlling each dinosaur is a Feed-Forward Network configured as follows:
 
-Activation > 0.5 triggers a Jump.
+1. Neural Topology
 
-Activation ≤ 0.5 maintains Run state.
+Input Layer (2 Nodes):
 
-Fitness Function: Determined by the distance traveled (score).
+Y-Position: The vertical position of the dinosaur (tracking jump height).
 
-Project Structure
+Obstacle Distance: Euclidean distance between the dinosaur and the next incoming obstacle.
 
-.
-├── Assets/              # Game sprites (Dino, Cactus, Track)
-├── config.txt           # NEAT algorithm parameters
-├── main.py              # Entry point and game loop
-└── requirements.txt     # Python dependencies
+Hidden Layers: Evolved dynamically by the algorithm (starts with 0).
+
+Output Layer (1 Node):
+
+Action Trigger: A tanh activation value > 0.5 initiates a JUMP. Otherwise, the agent continues to RUN.
+
+2. Configuration (config.txt)
+
+Population Size: 15 agents per generation.
+
+Fitness Function: Maximize distance traveled.
+
+Activation Function: Hyperbolic Tangent (tanh).
+
+##Project Structure
+
+The application relies on a strict directory structure for asset loading.
+
+ai-dino-runner/
+├── Assets/                  # Required graphic assets
+│   ├── Dino/                # DinoRun1.png, DinoRun2.png, DinoJump.png
+│   ├── Cactus/              # SmallCactus1-3.png, LargeCactus1-3.png
+│   └── Other/               # Track.png
+├── config.txt               # NEAT genome configuration
+├── main.py                  # Application entry point
+├── requirements.txt         # Dependency manifest
+└── README.md                # Documentation
 
 
-Install dependencies:
+##Install dependencies:
 
 pip install -r requirements.txt
 
 
-Verify Assets:
-Ensure the Assets directory contains the required subfolders (Dino, Cactus, Other) and image files.
+##Asset Verification:
+Ensure the Assets/ folder is present in the root directory. The simulation will fail to initialize if sprites are missing.
 
-Usage
+##Usage
 
-Execute the main script to initiate the training simulation:
+To start the training simulation:
 
 python main.py
 
 
-The simulation will launch a window displaying the current generation. The game speed increases automatically as the fitness score rises.
+Runtime Controls
 
-Configuration
+The simulation runs automatically. The HUD displays:
 
-The evolutionary parameters are defined in config.txt. Key configurations include:
+Points: Current score (distance traveled).
 
-pop_size: The number of agents per generation (Default: 15).
+Dinosaurs Alive: Count of active agents in the current generation.
 
-fitness_threshold: The target score to terminate training.
+Generation: Current evolutionary iteration.
 
-network parameters: Settings for node mutation, weight initialization, and activation functions.
+Game Speed: dynamic velocity multiplier.
 
-License
+##License
 
-This project is open-source and available under the MIT License.
+This project is open-source software licensed under the MIT License.

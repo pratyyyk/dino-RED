@@ -11,3 +11,11 @@ The core of this project is the interaction between the game environment (Pygame
 
 ## Project Structure
 
+├── Assets/                  # Required graphic assets
+│   ├── Dino/                # DinoRun1.png, DinoRun2.png, DinoJump.png
+│   ├── Cactus/              # SmallCactus1-3.png, LargeCactus1-3.png
+│   └── Other/               # Track.png
+├── config.txt               # NEAT genome configuration
+├── main.py                  # Application entry point
+├── requirements.txt         # Dependency manifest
+└── README.md                # Documentation

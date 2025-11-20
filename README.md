@@ -1,6 +1,6 @@
 # 🦕 dino-RED 
 
-A Python implementation of the NeuroEvolution of Augmenting Topologies (NEAT) algorithm applied to the classic Chrome Dinosaur endless runner.
+A Python implementation of the NEAT algorithm (REINFORCEMENT LEARNING) applied to the classic Chrome Dino endless runner.
 
 
 ## 📃 Description 
@@ -10,12 +10,48 @@ This is the **Chrome Dino Game** using NEAT and Pygame written in **Python**.
 In this project, NEAT is used to train an AI to play the Chrome Dino Game.This is a simple infinite runner where the player has to jump over cactus and avoid birds. 
 The game gets progressively harder as the player's score increases.
 
+## 🧑🏻‍🔧 Technical Architecture
+
+The neural network controlling each dinosaur is a Feed-Forward Network configured as follows:
+
+1. Neural Topology
+
+* Input Layer (2 Nodes):
+
+* Y-Position: The vertical position of the dinosaur (tracking jump height).
+
+* Obstacle Distance: Euclidean distance between the dinosaur and the next incoming obstacle.
+
+* Hidden Layers: Evolved dynamically by the algorithm (starts with 0).
+
+* Output Layer (1 Node):
+
+* Action Trigger: A tanh activation value > 0.5 initiates a JUMP. Otherwise, the agent continues to RUN.
+
+2. Configuration (config.txt)
+
+* Population Size: 15 agents per generation.
+
+* Fitness Function: Maximize distance traveled.
+
+* Activation Function: Hyperbolic Tangent (tanh).
+
 ## 🕹️ Controls 
 - You don't need to control the dinosaur. The AI :)
+
+## 📂 Installation
+
+Prerequisites
+
+* Python 3.6+
+
+* pip (Python Package Installer)
 
 ## 📚 Libraries 
 
 - pygame: Pygame is a cross-platform set of Python modules designed for writing video games.
 - NEAT: NEAT is a method developed by Kenneth O. Stanley for evolving arbitrary neural networks.
+
+
 
 

@@ -15,7 +15,7 @@ The neural network controlling each dinosaur is a Feed-Forward Network configure
 
 1. Neural Topology
 
-* Input Layer (2 Nodes):
+Input Layer (2 Nodes):
 
 * Y-Position: The vertical position of the dinosaur (tracking jump height).
 
@@ -23,7 +23,7 @@ The neural network controlling each dinosaur is a Feed-Forward Network configure
 
 * Hidden Layers: Evolved dynamically by the algorithm (starts with 0).
 
-* Output Layer (1 Node):
+Output Layer (1 Node):
 
 * Action Trigger: A tanh activation value > 0.5 initiates a JUMP. Otherwise, the agent continues to RUN.
 

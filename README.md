@@ -37,6 +37,7 @@ The neural network controlling each dinosaur is a Feed-Forward Network configure
 * Activation Function: Hyperbolic Tangent (tanh).
 
 ## 🕹️ Controls 
+
 - You don't need to control the dinosaur. The AI :)
 
 ## 📂 Installation
@@ -47,10 +48,21 @@ Prerequisites
 
 * pip (Python Package Installer)
 
+# 🍽️ Setup
+
+* Clone the Repository
+* install dependencies
+* Ensure the Assets/ folder is present in the root directory
+* python main.py
+
 ## 📚 Libraries 
 
 - pygame: Pygame is a cross-platform set of Python modules designed for writing video games.
 - NEAT: NEAT is a method developed by Kenneth O. Stanley for evolving arbitrary neural networks.
+
+## 🪪 Licence
+
+This project is open-source software licensed under the MIT License.
 
 
 

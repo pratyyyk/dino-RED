@@ -2,12 +2,6 @@
 
 A Python implementation of the NeuroEvolution of Augmenting Topologies (NEAT) algorithm applied to the classic Chrome Dinosaur endless runner.
 
-# NEAT Chrome Dino Game
-
-![Preview](/preview.gif)
-<br>
-<br>
-
 ##  **A.I. Chrome Dinosaur** in **Python** using **Pygame** and **NEAT Algorithm**! 🦖
 
 ## Description
